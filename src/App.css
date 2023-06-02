@@ -1,38 +1,153 @@
-.App {
+
+.App{
+  width: 98vw;
+  margin: auto;
+}
+
+h1{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-desc{
+  width: 90%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Label styles with animation */
+.title-desc label{
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  animation: zoomOut 1s ease-in-out 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.content-in{
+  margin-bottom: 20px;
+}
+
+/* input element styles */
+.title-desc input{
+  width: 90%;
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid black;
+}
+
+.title-desc input:focus{
+  border: 1px solid rgb(0, 213, 255);
+  box-shadow: 0 0 3px 1px rgb(0, 213, 255);
+}
+
+.title-desc textarea{
+  width: 90%;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid black;
+}
+
+.title-desc textarea::-webkit-scrollbar{
+  display: none;
+}
+
+.title-desc textarea:focus{
+  border: 1px solid rgb(0, 213, 255);
+  box-shadow: 0 0 3px 1px rgb(0, 213, 255);
+}
+
+/* Submit division */
+.submit-div{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.title-desc button{
+  display: block;
+  margin: auto;
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: rgb(255, 106, 0);
   color: white;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.title-desc button:hover{
+  background-color: rgb(218, 92, 1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* blog icon animations */
+.blog-icon{
+  display: inline-block;
+  margin-right: 15px;
+  animation: blogIconStretch 2s ease-in-out 5;
+}
+
+
+@keyframes blogIconStretch {
+  
+  from{
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+
+  10%{
+    transform: scale(1.1);
+  }
+
+  20%{
+    transform: scale(0.9);
+  }
+
+  30%{
+    transform: scale(1.08);
+  }
+
+  40%{
+    transform: scale(0.92);
+  }
+
+  50%{
+    transform: scale(1.06);
+  }
+
+  60%{
+    transform: scale(0.94);
+  }
+
+  70%{
+    transform: scale(1.04);
+  }
+
+  80%{
+    transform: scale(0.96);
+  }
+
+  86%{
+    transform: scale(1.02);
+  }
+
+  94%{
+    transform: scale(0.98);
+  }
+
+  to{
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes zoomOut {
+  from{
+    transform: translateX(100px);
+  }
+
+  to{
+    transform: translateX(0px);
   }
 }
